@@ -1,13 +1,94 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Dark blue background */
+  color: #ffffff; /* White text color */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar {
+  margin: 20px;
+}
+
+.nav-link {
+  color: #343a40; /* Default text color */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.nav-link:hover {
+  color: #8B0000 !important; /* Dark red color on hover */
+}
+
+.brand {
+  font-size: 1.5rem; /* Larger font size */
+  background: linear-gradient(90deg, #8B0000, #FF6347); /* Gradient background */
+  -webkit-background-clip: text;
+  background-clip: text; /* Standard property */
+  -webkit-text-fill-color: transparent;
+  padding: 5px 10px; /* Padding for some space */
+  border-radius: 5px; /* Rounded edges */
+  transition: transform 0.3s ease;
+}
+
+.brand:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+/* src/styles/App.css or src/styles/RecipeCard.css */
+
+.card {
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Ensures content fits in card */
+}
+
+.card-video {
+  border: none; /* Remove border */
+}
+
+.card-title {
+  font-size: 0.9rem; 
+  margin-bottom: 0.25rem; 
+}
+
+.card-text {
+  font-size: 0.8rem; 
+  margin-bottom: 0.5rem;
+}
+
+.username {
+  font-size: 0.8rem; 
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column; 
+  height: 100%; /* Ensures card body takes full height */
+}
+
+/* Optional: Responsive adjustments */
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 20px; /* Adds spacing between cards */
+  }
+}
+.video-player {
+  object-fit: contain; /* Ensure the entire video is visible */
+  width: 100%;
+  height: 100%;
+}
+
+.play-pause-overlay i {
+  font-size: 50px;
+  color: white;
+  opacity: 0.8;
+}
+
+.play-pause-overlay:hover i {
+  opacity: 1;
+}
+
+.video-info h5 {
+  margin-bottom: 0;
+}
+
+.video-info p {
+  margin-bottom: 0.2rem;
 }
